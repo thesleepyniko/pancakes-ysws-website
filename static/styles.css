@@ -1,7 +1,8 @@
 
 @keyframes light-to-dark-pancakes {
-  from {background-color: #5b2c16	;}
+  from {background-color: #5b2c16;} 
   to {background-color: #6a4c30;}
+  /* 100% {background-color: #5b2c16;}  */
 }
 
 .hero {
@@ -12,22 +13,25 @@
     height: 100vh;
     background-color: #6a4c30;
     animation-name: light-to-dark-pancakes; /* silly animation :sillybleh: */
-    animation-duration: 2s
+    animation-duration: 3s 
 }
 
 body {
     margin: 0;
     padding: 0;
 }
-button {
 
+.buttons button {
+    margin: 4;
 }
 
 .buttons {
-    display: grid;
+    display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
 }
+
 .hero-image {
     /* object-fit: cover; */
     width: 60%;
@@ -40,4 +44,31 @@ button {
   font-weight: 600;
   font-style: normal;
   color: white;
+}
+
+.jetbrains-mono-footer {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  color: white;
+}
+
+footer {
+    background-color: #6a4c30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation-name: light-to-dark-pancakes;
+    animation-duration: 3s;
+    padding: .5%;
+}
+a {
+    color: #ce945f;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
 }
