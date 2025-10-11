@@ -10,15 +10,50 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 130vh;
     background-color: #6a4c30;
     animation-name: light-to-dark-pancakes; /* silly animation :sillybleh: */
-    animation-duration: 3s 
+    animation-duration: 3s;
+    background-image: url("assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: auto 75%;
+    background-position: center;
+    margin-top: -30vh;
+    position: relative;
+    /* background-color: #555; */
+    /* box-shadow: 0 0 5px 10px #555; */
+    /* padding-bottom:; */
 }
+
+.hero > * {
+    position: relative;
+    z-index: 1; 
+}
+
+.hero-image {
+    filter: drop-shadow(30px 10px 4px #4444dd);
+}
+.edge-blur {
+  position: relative;
+  overflow: hidden;
+}
+
+.edge-blur::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit; 
+  filter: blur(20px);
+  margin: -20px; 
+}
+
 
 body {
     margin: 0;
     padding: 0;
+    background-color: #6a4c30;
+    animation-name: light-to-dark-pancakes;
+    animation-duration: 3s;
 }
 
 .buttons button {
@@ -37,7 +72,13 @@ body {
     width: 60%;
     height: auto;
 }
-
+.info {
+    margin-top: -100px;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    color: white;
+}
 .jetbrains-mono-title {
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
@@ -62,10 +103,11 @@ footer {
     justify-content: center;
     animation-name: light-to-dark-pancakes;
     animation-duration: 3s;
-    padding: .5%;
+    padding: 2%;
+    padding: 5vh
 }
 a {
-    color: #ce945f;
+    color: #e6a569;
 }
 
 footer p {
