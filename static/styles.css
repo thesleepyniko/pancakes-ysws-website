@@ -1,0 +1,43 @@
+
+@keyframes light-to-dark-pancakes {
+  from {background-color: #5b2c16	;}
+  to {background-color: #6a4c30;}
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #6a4c30;
+    animation-name: light-to-dark-pancakes; /* silly animation :sillybleh: */
+    animation-duration: 2s
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+button {
+
+}
+
+.buttons {
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+.hero-image {
+    /* object-fit: cover; */
+    width: 60%;
+    height: auto;
+}
+
+.jetbrains-mono-title {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: white;
+}
