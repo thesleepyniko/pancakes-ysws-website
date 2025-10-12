@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
         <script src="./main.js" defer></script>
         <link rel="stylesheet" href="./styles.css"/>
         <!--fonts!-->
@@ -9,20 +10,67 @@
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div id="clubmodal" class="modal">
+            <div class="modal-content">
+                <h1>Wait up!</h1>
+                <p>Are you submitting for a club?</p>
+                <div class="buttons">
+                    <button>yes!</button>
+                    <button>no!</button>
+                </div>
+            </div>
+        </div>
+        <div id="stackmodal" class="modal">
+            <h1>One more thing...</h1>
+            <p>Which stack are you on?</p>
+            <div class="buttons">
+                <button>Stack 1!</button>
+                <button>Stack 2!</button>
+                <button>Stack 3!</button>
+            </div>
+        </div>
         <section class="hero edge-blur">
             <img class="hero-image" alt="Logo for the Pancakes YSWS" src="assets/pancakes.svg">
             <h1 class="jetbrains-mono-title">Build a full stack app, get a stack of pancakes!</h1>
             <section class="buttons">
-                <button>button for scale 1</button>
-                <button> woah another one? </button>
-                <button>okay this is getting ridiculous</button>
+                <button class="button-top">Guides</button>
+                <button class="button-top">Submission Requirements</button>
+                <button class="button-top">Submit</button>
             </section>
         </section>
-        <!-- </section>
-
-        </section> -->
-        <section class="info">
-            <h1>this is a test for fastapi!</h1>
+        <section class="jetbrains-mono-body info">
+            <div class="info-align-center">
+                <h1>What is pancakes?</h1>
+                <h3>Pancakes is a YSWS where you build a full stack app by going through "<i>stacks</i>", and get rewarded with pancakes!</h3>
+            </div>
+            <br>
+            <div class="info-align-left">
+                <h1>heres a stack</h1>
+                <p>heres some explanation about a stack</p>
+            </div>
+            <br>
+            <div class="info-align-right">
+                <h1>heres another stack</h1>
+                <p>more explanation...blah blah blah...</p>
+            </div>
+            <br>
+            <div class="info-align-left">
+                <h1>okay, now we talk more about the third stack</h1>
+                <p>yap yap yap</p>
+            </div>
+            <br>
+            <div class="info-align-center">
+                <h1>Ready to start?</h1>
+                <h3>Get started with our guides, or take a look at the requirements for submission!</h3>
+                <div class="buttons">
+                    <button class="button-bottom">
+                        Submission Requirements
+                    </button>
+                    <button class="button-bottom">
+                        Guides
+                    </button>
+                </div>
+            </div>
         </section>
         <footer class="jetbrains-mono-footer">
             <p>made with &lt;3 by niko and <a href="https://hackclub.com">Hack Club</a>, a 501(c)(3) nonprofit</a></p> 

@@ -12,4 +12,4 @@ app = FastAPI()
 #     return {"Hello": "World"}
 
 # mounting static directory, telling fastAPI it's html, and serving it at /
-app.mount("/", StaticFiles(directory="static", html=True), name="frontend") 
+app.mount("/", StaticFiles(directory="static", html=True), name="frontend")

@@ -1,8 +1,33 @@
-
 @keyframes light-to-dark-pancakes {
-  from {background-color: #5b2c16;} 
-  to {background-color: #6a4c30;}
-  /* 100% {background-color: #5b2c16;}  */
+    from {background-color: #5b2c16;} 
+    to {background-color: #6a4c30;}
+    /* 100% {background-color: #5b2c16;}  */
+}
+
+.clubmodal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.stackmodal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
 
 .hero {
@@ -12,14 +37,16 @@
     justify-content: center;
     height: 130vh;
     background-color: #6a4c30;
-    animation-name: light-to-dark-pancakes; /* silly animation :sillybleh: */
-    animation-duration: 3s;
+    /* animation-name: light-to-dark-pancakes; 
+    animation-duration: 3s; */
     background-image: url("assets/bg.png");
     background-repeat: no-repeat;
-    background-size: auto 75%;
+    background-size: auto 100vh;
     background-position: center;
     margin-top: -30vh;
     position: relative;
+    color: black;
+    text-align: center;
     /* background-color: #555; */
     /* box-shadow: 0 0 5px 10px #555; */
     /* padding-bottom:; */
@@ -31,38 +58,52 @@
 }
 
 .hero-image {
-    filter: drop-shadow(30px 10px 4px #4444dd);
+    filter: drop-shadow(10px 5px 20px #000000);
+    
 }
 .edge-blur {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .edge-blur::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit; 
-  filter: blur(20px);
-  margin: -20px; 
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit; 
+    filter: blur(20px);
+    margin: -20px; 
 }
 
+html {
+    background: #6a4c30
+        /* to bottom, 
+        #ffe064 0%, 
+        #6a4c30 100%); */
+}
 
 body {
     margin: 0;
     padding: 0;
-    background-color: #6a4c30;
-    animation-name: light-to-dark-pancakes;
-    animation-duration: 3s;
+    /* background: linear-gradient(
+        to bottom, 
+        #ffe064 0%, 
+        #6a4c30 100%); */
+    min-height: 100vh;
+    /* animation-name: light-to-dark-pancakes;
+    animation-duration: 3s; */
 }
 
-.buttons button {
-    margin: 4;
-}
+/* .buttons button {
+    margin: .5%;
+    padding: .5%;
+} */
 
 .buttons {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
@@ -73,26 +114,103 @@ body {
     height: auto;
 }
 .info {
-    margin-top: -100px;
+    margin-top: -20vh;
     position: relative;
     z-index: 10;
     background: transparent;
     color: white;
 }
+
+.info-align-left {
+    margin-left: 2%;
+    /* display: flex; */
+    text-align: left;
+}
+
+.info-align-right {
+    margin-right: 2%;
+    text-align: right;
+}
+
+.info-align-center {
+    margin-right: 2%;
+    text-align: center;
+}
+
+
 .jetbrains-mono-title {
-  font-family: "JetBrains Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: black;
+}
+
+.jetbrains-mono-body {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
 }
 
 .jetbrains-mono-footer {
-  font-family: "JetBrains Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+}
+
+.button-top {
+    background-color: #6a4c30;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    padding: .8rem;
+    margin: .5rem;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.button-top:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(1px 1px 20px #000000);
+}
+
+.button-bottom {
+    background-color: #d2a679;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    padding: .8rem;
+    margin: .5rem;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.button-bottom:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(1px 1px 20px #000000);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-top {
+    animation: none;
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-bottom {
+    animation: none;
+    transition: none;
+  }
+}
+
+.button-top, .button-bottom {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
 }
 
 footer {
@@ -101,11 +219,12 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation-name: light-to-dark-pancakes;
-    animation-duration: 3s;
+    /* animation-name: light-to-dark-pancakes;
+    animation-duration: 3s; */
     padding: 2%;
     padding: 5vh
 }
+
 a {
     color: #e6a569;
 }
