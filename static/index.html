@@ -10,32 +10,13 @@
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div id="clubmodal" class="modal">
-            <div class="modal-content">
-                <h1>Wait up!</h1>
-                <p>Are you submitting for a club?</p>
-                <div class="buttons">
-                    <button>yes!</button>
-                    <button>no!</button>
-                </div>
-            </div>
-        </div>
-        <div id="stackmodal" class="modal">
-            <h1>One more thing...</h1>
-            <p>Which stack are you on?</p>
-            <div class="buttons">
-                <button>Stack 1!</button>
-                <button>Stack 2!</button>
-                <button>Stack 3!</button>
-            </div>
-        </div>
         <section class="hero edge-blur">
             <img class="hero-image" alt="Logo for the Pancakes YSWS" src="assets/pancakes.svg">
             <h1 class="jetbrains-mono-title">Build a full stack app, get a stack of pancakes!</h1>
             <section class="buttons">
                 <button class="button-top">Guides</button>
                 <button class="button-top">Submission Requirements</button>
-                <button class="button-top">Submit</button>
+                <button class="button-top" id="submit">Submit</button>
             </section>
         </section>
         <section class="jetbrains-mono-body info">
@@ -76,5 +57,26 @@
             <p>made with &lt;3 by niko and <a href="https://hackclub.com">Hack Club</a>, a 501(c)(3) nonprofit</a></p> 
             <!-- <br> -->
         </footer>
+         <div id="clubmodal" class="clubmodal jetbrains-mono-body">
+            <div class="modal-content">
+                <h1>Wait up!</h1>
+                <p>Are you submitting for a club?</p>
+                <div class="buttons">
+                    <button id="yes-club-btn" class="button-modal">yes!</button>
+                    <button id="no-club-btn" class="button-modal">no!</button>
+                </div>
+            </div>
+        </div>
+        <div id="stackmodal" class="stackmodal jetbrains-mono-body">
+            <div class="modal-content">
+                <h1>One more thing...</h1>
+                <p>Which stack are you on?</p>
+                <div class="buttons">
+                    <button id="stack-1-btn" class="button-modal">Stack 1!</button>
+                    <button id="stack-2-btn" class="button-modal">Stack 2!</button>
+                    <button id="stack-3-btn" class="button-modal">Stack 3!</button>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
