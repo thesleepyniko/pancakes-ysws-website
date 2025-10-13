@@ -70,7 +70,7 @@
     background-color: #6b4e35;
     /* animation-name: light-to-dark-pancakes; 
     animation-duration: 3s; */
-    background-image: url("assets/bg.png");
+    background-image: url("/static/assets/bg.png");
     background-repeat: no-repeat;
     background-size: auto 100vh;
     background-position: center;

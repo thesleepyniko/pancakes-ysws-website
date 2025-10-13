@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="view-transition" content="same-origin">
         <meta charset="UTF-8">
-        <script src="/static/main.js" defer></script>
+        <!-- <script src="./main.js" defer></script> -->
         <link rel="stylesheet" href="/static/styles.css"/>
+        <script src="/static/requirements.js" defer></script>
         <!--fonts!-->
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +13,12 @@
     <body>
         <section class="hero edge-blur">
             <img class="hero-image" alt="Logo for the Pancakes YSWS" src="/static/assets/pancakes.svg">
-            <h1 class="jetbrains-mono-title">Build a full stack app, get a stack of pancakes!</h1>
-            <section class="buttons">
-                <button class="button-top" onclick="location.href='requirements';">Requirements</button>
+            <h1 class="jetbrains-mono-title">Requirements</h1>
+            <!-- <section class="buttons">
+                <button class="button-top">Submission Requirements</button>
                 <button class="button-top" id="guides-1">Guides</button>
                 <button class="button-top" id="submit-1">Submit</button>
-            </section>
+            </section> -->
         </section>
         <section class="jetbrains-mono-body info">
             <div class="info-align-center">
@@ -42,18 +42,18 @@
             </div>
             <br>
             <div class="info-align-center">
-                <h1>Ready to start?</h1>
-                <h3>Get started with our guides, take a look at the requirements for submission, or submit if you're ready!</h3>
+                <h1>Done here?</h1>
+                <h3>Submit, or go back to the home page!</h3>
                 <div class="buttons">
-                    <button class="button-bottom">
-                        Submission Requirements
-                    </button>
-                    <button id="guides-2" class="button-bottom">
-                        Guides
-                    </button>
-                    <button id="submit-2" class="button-bottom">
+                    <button class="button-bottom" id="submit-1">
                         Submit
                     </button>
+                    <button onclick="location.href='..'" class="button-bottom">
+                        Go Home
+                    </button>
+                    <!-- <button id="submit-2" class="button-bottom">
+                        Submit
+                    </button> -->
 
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div id="guidemodal" class="modal jetbrains-mono-body">
+        <!--  <div id="guidemodal" class="modal jetbrains-mono-body">
             <div class="modal-content">
                 <h1>Hey!</h1>
                 <p>Which stack are you on? &#40;If you're new, click Stack 1!&#41;</p>
@@ -93,6 +93,6 @@
                     <button id="stack-3-guide-btn" class="button-modal">Stack 3!</button>
                 </div>
             </div>
-        </div>
+        </div> --> 
     </body>
 </html>
