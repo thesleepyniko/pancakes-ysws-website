@@ -1,33 +1,10 @@
 // most of the stuff below will be fore the modal stuff
 var clubModal = document.getElementById("clubmodal");
 var stackModal = document.getElementById("stackmodal");
-var guideModal = document.getElementById("guidemodal")
-var modalOpenBtn1 = document.getElementById("submit-1");
-var modalOpenBtn2 = document.getElementById("submit-2");
-var guideOpenBtn1 = document.getElementById("guides-1");
-var guideOpenBtn2 = document.getElementById("guides-2");
+var guideModal = document.getElementById("guidemodal");
+var btnArr = ["submit-1", "submit-2", "guides-1", "guides-2"]
 var body = document.body;
 var clubSubmission = false;
-
-modalOpenBtn1.onclick = function(event) {
-    clubModal.classList.add("active");
-    body.style.overflow = "hidden";
-}
-
-modalOpenBtn2.onclick = function(event) {
-    clubModal.classList.add("active");
-    body.style.overflow = "hidden";
-}
-
-guideOpenBtn1.onclick = function(event) {
-    guideModal.classList.add("active");
-    body.style.overflow = "hidden";
-}
-
-guideOpenBtn2.onclick = function(event) {
-    guideModal.classList.add("active");
-    body.style.overflow = "hidden"
-}
 
 function removeModals() {
     guideModal.classList.remove('active');
@@ -35,6 +12,45 @@ function removeModals() {
     stackModal.classList.remove('active');
     body.style.overflow = 'auto';
 }
+
+function addModalOnClick(btnId) {
+    if (btnId.startsWith("submit")) {
+        let btn = document.getElementById(btnId)
+        btn.addEventListener("click", function(event) {
+            clubModal.classList.add("active")
+            body.style.overflow = "hidden";
+        })
+    }
+    else if (btnId.startsWith("guides")) {
+        let btn = document.getElementById(btnId)
+        btn.addEventListener("click", function(event) {
+            guideModal.classList.add("active")
+            body.style.overflow = "hidden";
+        })
+    }
+}
+
+btnArr.forEach(addModalOnClick)
+//i feel like there has to be a better way to do this...
+// modalOpenBtn1.onclick = function(event) {
+//     clubModal.classList.add("active");
+//     body.style.overflow = "hidden";
+// }
+
+// modalOpenBtn2.onclick = function(event) {
+//     clubModal.classList.add("active");
+//     body.style.overflow = "hidden";
+// }
+
+// guideOpenBtn1.onclick = function(event) {
+//     guideModal.classList.add("active");
+//     body.style.overflow = "hidden";
+// }
+
+// guideOpenBtn2.onclick = function(event) {
+//     guideModal.classList.add("active");
+//     body.style.overflow = "hidden"
+// }
 
 window.onclick = function(event) {
   if ((event.target == clubModal) || (event.target == stackModal) || (event.target == guideModal)) {
