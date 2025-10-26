@@ -98,10 +98,37 @@
     position: relative;
     color: black;
     text-align: center;
+    backdrop-filter: blur(3px); 
+}
+
+.accordion {
+    background-color: #6b4e35;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #3d2c1d;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #6b4e35;
+  display: none;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
     /* background-color: #555; */
     /* box-shadow: 0 0 5px 10px #555; */
     /* padding-bottom:; */
-}
+
 
 .hero > * {
     position: relative;
@@ -109,7 +136,11 @@
 }
 
 .hero-image {
-    filter: drop-shadow(10px 5px 20px #000000);
+    filter: drop-shadow(15px 5px 15px #000000);
+    /* background: rgba(0, 0, 0, 0.1) */
+    /* filter: 
+        drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5))
+        brightness(0.7); */
     
 }
 .edge-blur {
