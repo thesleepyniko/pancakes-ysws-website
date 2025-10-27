@@ -1,6 +1,6 @@
 // most of the stuff below will be fore the modal stuff
 const clubModal = document.getElementById("clubmodal");
-const stackModal = document.getElementById("stackmodal");
+// const stackModal = document.getElementById("stackmodal");
 const guideModal = document.getElementById("guidemodal");
 const btnArr = ["submit-1", "submit-2", "guides-1", "guides-2"]
 const body = document.body;
@@ -9,7 +9,7 @@ let clubSubmission = false;
 function removeModals() {
     guideModal.classList.remove('active');
     clubModal.classList.remove('active');
-    stackModal.classList.remove('active');
+    // stackModal.classList.remove('active');
     body.style.overflow = 'auto';
 }
 
@@ -37,7 +37,7 @@ function isButtonCheck(event) {
 btnArr.forEach(addModalOnClick)
 
 window.onclick = function(event) {
-  if ((event.target == clubModal) || (event.target == stackModal) || (event.target == guideModal)) {
+  if ((event.target == clubModal) || (event.target == guideModal)) {
     removeModals();
   }
 } 
@@ -77,64 +77,66 @@ clubModal.onclick = function(event) {
             case "yes-club-btn":
                 clubSubmission = true;
                 clubModal.classList.remove('active');
-                stackModal.classList.add('active');
+                // stackModal.classList.add('active');
+                window.location.href = "https://fillout.com/pancakessubmissionsworkshop"
                 break;
             
             case "no-club-btn": 
                 clubSubmission = false;
                 clubModal.classList.remove('active');
-                stackModal.classList.add('active');
+                // stackModal.classList.add('active');
+                window.location.href = "https://fillout.com/pancakessubmissions"
                 break;
         }
     }
 }
 
-stackModal.onclick = function(event) {
-    if (!isButtonCheck(event)) {
-        return;
-    }
-    else {
-        const buttonId = event.target.id
-        switch (buttonId) {
-            case "stack-1-btn":
-                if (clubSubmission) {
-                    // console.log("attempting to redirect to stack 1 club")
-                    removeModals();
-                    window.location.href = "https://fillout.com/stack1club"; // template, no link to redirect to yet :pf:
-                }
-                else {
-                    // console.log("attempting to redirect to stack 1")
-                    window.location.href = "https://fillout.com/stack1"; // this should redirect to something else, again no link yet :pf:
-                    removeModals();
-                }
-                break;
-            case "stack-2-btn":
-                if (clubSubmission) {
-                    // console.log("attempting to redirect to stack 2 club")
-                    removeModals();
-                    window.location.href = "https://fillout.com/stack2club";
-                }
-                else {
-                    // console.log("attempting to redirect to stack 2")
-                    removeModals();
-                    window.location.href = "https://fillout.com/stack2";
-                }
-                break;
-            case "stack-3-btn":
-                if (clubSubmission) {
-                    // console.log("attempting to redirect to stack 3 club")
-                    removeModals();
-                    window.location.href = "https://fillout.com/stack3club";
-                }
-                else {
-                    // console.log("attempting to redirect to stack 3")
-                    removeModals();
-                    window.location.href = "https://fillout.com/stack3";
-                }
-                break;
-        }
-    }
-}
+// stackModal.onclick = function(event) {
+//     if (!isButtonCheck(event)) {
+//         return;
+//     }
+//     else {
+//         const buttonId = event.target.id
+//         switch (buttonId) {
+//             case "stack-1-btn":
+//                 if (clubSubmission) {
+//                     // console.log("attempting to redirect to stack 1 club")
+//                     removeModals();
+//                     window.location.href = "https://fillout.com/stack1club"; // template, no link to redirect to yet :pf:
+//                 }
+//                 else {
+//                     // console.log("attempting to redirect to stack 1")
+//                     window.location.href = "https://fillout.com/stack1"; // this should redirect to something else, again no link yet :pf:
+//                     removeModals();
+//                 }
+//                 break;
+//             case "stack-2-btn":
+//                 if (clubSubmission) {
+//                     // console.log("attempting to redirect to stack 2 club")
+//                     removeModals();
+//                     window.location.href = "https://fillout.com/stack2club";
+//                 }
+//                 else {
+//                     // console.log("attempting to redirect to stack 2")
+//                     removeModals();
+//                     window.location.href = "https://fillout.com/stack2";
+//                 }
+//                 break;
+//             case "stack-3-btn":
+//                 if (clubSubmission) {
+//                     // console.log("attempting to redirect to stack 3 club")
+//                     removeModals();
+//                     window.location.href = "https://fillout.com/stack3club";
+//                 }
+//                 else {
+//                     // console.log("attempting to redirect to stack 3")
+//                     removeModals();
+//                     window.location.href = "https://fillout.com/stack3";
+//                 }
+//                 break;
+//         }
+//     }
+// }
 
 
 

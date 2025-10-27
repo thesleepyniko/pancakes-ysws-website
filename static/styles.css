@@ -86,20 +86,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 130vh;
-    background-color: #6b4e35;
+    min-height: 100vh; 
+    background-image:linear-gradient(to bottom, #ffd62f 80%, #6b4e35 95%);
+    margin-bottom: 20vh;
     /* animation-name: light-to-dark-pancakes; 
     animation-duration: 3s; */
-    background-image: url("/static/assets/bg.png");
+    /* background-image: url("/static/assets/bg.png");
     background-repeat: no-repeat;
     background-size: auto 100vh;
     background-position: center;
-    margin-top: -30vh;
+    margin-top: -30vh; */
     position: relative;
     color: black;
     text-align: center;
     backdrop-filter: blur(3px); 
+    z-index: 0
 }
+
+
 
 .accordion {
     background-color: #6b4e35;
@@ -250,6 +254,8 @@ body {
 .info-align-center {
     /* margin-right: 2%; */
     text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
