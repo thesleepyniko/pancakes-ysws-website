@@ -392,6 +392,19 @@ header {
     z-index: 500;
 }
 
+body {
+    position: relative;      /* makes body the positioning context */
+    min-height: 100vh;
+}
+
+.niko-image {
+    position: absolute;      
+    /* bottom: 0;   */
+    right: 3%;              
+    height: auto;
+    z-index: 100;
+}
+
 /* * {
     margin: 0;
     padding: 0;

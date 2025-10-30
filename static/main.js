@@ -1,5 +1,5 @@
 // most of the stuff below will be fore the modal stuff
-const clubModal = document.getElementById("clubmodal");
+// const clubModal = document.getElementById("clubmodal");
 // const stackModal = document.getElementById("stackmodal");
 const guideModal = document.getElementById("guidemodal");
 const btnArr = ["submit-1", "submit-2", "guides-1", "guides-2"]
@@ -24,7 +24,7 @@ for (i = 0; i < acc.length; i++) {
 
 function removeModals() {
     guideModal.classList.remove('active');
-    clubModal.classList.remove('active');
+    // clubModal.classList.remove('active');
     // stackModal.classList.remove('active');
     body.style.overflow = 'auto';
 }
@@ -33,8 +33,7 @@ function addModalOnClick(btnId) {
     if (btnId.startsWith("submit")) {
         let btn = document.getElementById(btnId)
         btn.addEventListener("click", function(event) {
-            clubModal.classList.add("active")
-            body.style.overflow = "hidden";
+            window.location.href = "https://forms.hackclub.com/pancakes";
         })
     }
     else if (btnId.startsWith("guides")) {
@@ -53,7 +52,7 @@ function isButtonCheck(event) {
 btnArr.forEach(addModalOnClick)
 
 window.onclick = function(event) {
-  if ((event.target == clubModal) || (event.target == guideModal)) {
+  if (event.target == guideModal) {
     removeModals();
   }
 } 
@@ -83,29 +82,29 @@ guideModal.onclick = function(event) {
     }
 }
 
-clubModal.onclick = function(event) {
-    if (!isButtonCheck(event)) {
-        return;
-    }
-    else {
-        const buttonId = event.target.id;
-        switch (buttonId) {
-            case "yes-club-btn":
-                clubSubmission = true;
-                clubModal.classList.remove('active');
-                // stackModal.classList.add('active');
-                window.location.href = "https://fillout.com/pancakessubmissionsworkshop"
-                break;
+// clubModal.onclick = function(event) {
+//     if (!isButtonCheck(event)) {
+//         return;
+//     }
+//     else {
+//         const buttonId = event.target.id;
+//         switch (buttonId) {
+//             case "yes-club-btn":
+//                 clubSubmission = true;
+//                 clubModal.classList.remove('active');
+//                 // stackModal.classList.add('active');
+//                 window.location.href = "https://fillout.com/pancakessubmissionsworkshop"
+//                 break;
             
-            case "no-club-btn": 
-                clubSubmission = false;
-                clubModal.classList.remove('active');
-                // stackModal.classList.add('active');
-                window.location.href = "https://fillout.com/pancakessubmissions"
-                break;
-        }
-    }
-}
+//             case "no-club-btn": 
+//                 clubSubmission = false;
+//                 clubModal.classList.remove('active');
+//                 // stackModal.classList.add('active');
+//                 window.location.href = "https://fillout.com/pancakessubmissions"
+//                 break;
+//         }
+//     }
+// }
 
 // stackModal.onclick = function(event) {
 //     if (!isButtonCheck(event)) {
