@@ -407,8 +407,28 @@ body {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.tier-div > *:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 50%;
+}
+
+.tier-div > * {
     width: 50%;
+    background-color: #d2a679;
+    border-radius: 30px;
+    padding: 30px;
+    height: 350px;
+    /* aspect-ratio: 4 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; */
 }
 
 @media (max-width: 768px) {
@@ -424,3 +444,11 @@ body {
     justify-self: center;
     grid-column: 2;
 }
+
+.tier-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+}
+
