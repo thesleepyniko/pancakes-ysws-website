@@ -2,7 +2,7 @@
 // const clubModal = document.getElementById("clubmodal");
 // const stackModal = document.getElementById("stackmodal");
 const guideModal = document.getElementById("guidemodal");
-const btnArr = ["submit-1", "submit-2", "guides-1", "guides-2"]
+const btnArr = ["guides-1", "guides-2"]
 const body = document.body;
 
 let acc = document.getElementsByClassName("accordion");

@@ -121,14 +121,14 @@
   background-color: #3d2c1d;
 }
 
-.accordion h1::before {
+.accordion h2::before{
     content: '>';
     display: inline-block; 
     margin-right: 0.7em; 
     transition: transform 0.3s ease;
 }
 
-.accordion.active h1::before {
+.accordion.active h2::before {
     transform: rotate(90deg);
 }
 

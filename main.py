@@ -1,7 +1,7 @@
 # this code is going to serve the static files and thats probably all, maybe like an api endpoint or two
 # half of the code here is commented out because god is it unneeded :pf:
 from fastapi import FastAPI
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 # from pyairtable import Api
 # from pyairtable.formulas import match
@@ -20,7 +20,14 @@ async def serve_root():
 @app.get("/requirements")
 async def serve_requirements():
     return FileResponse("static/requirements.html")
+
+@app.get("/submit")
+async def redirect_submit(club: str):
+    if club:
+        return RedirectResponse("https://forms.hackclub.com/pancakes?club=true")
+    return RedirectResponse("https://submit.hackclub.com/pancakes")
 # app.mount("/static", StaticFiles(directory="./static"), name="static")
+
 
 # @app.get("/")
 # def read_root():
@@ -51,4 +58,4 @@ async def serve_requirements():
 #     return ret_projects
 
 # mounting static directory for our static files, and serving it at /static
-app.mount("/static", StaticFiles(directory="static"), name="frontend")
+app.mount("/static", StaticFiles(directory="static"), name="static")
